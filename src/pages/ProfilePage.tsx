@@ -242,6 +242,64 @@ export default function ProfilePage() {
           </div>
 
           <div>
+            <label className="label">I am</label>
+            {editing ? (
+              <div className="grid grid-cols-2 gap-2">
+                {(['male', 'female', 'non-binary', 'other'] as Gender[]).map((g) => (
+                  <button
+                    key={g}
+                    onClick={() => updateDraft({ gender: g })}
+                    className={`py-2 rounded-xl border text-sm font-medium capitalize transition-colors ${
+                      draft.gender === g
+                        ? 'border-orange-500 bg-orange-500/10 text-orange-400'
+                        : 'border-zinc-700 text-zinc-400 hover:border-zinc-600'
+                    }`}
+                  >
+                    {g}
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <p className="text-white font-medium capitalize">{currentUser.gender}</p>
+            )}
+          </div>
+
+          <div>
+            <label className="label">Interested in</label>
+            {editing ? (
+              <div className="grid grid-cols-2 gap-2">
+                {(['male', 'female', 'non-binary', 'other'] as Gender[]).map((g) => {
+                  const selected = draft.interestedIn.includes(g);
+                  return (
+                    <button
+                      key={g}
+                      onClick={() =>
+                        updateDraft({
+                          interestedIn: selected
+                            ? draft.interestedIn.filter((x) => x !== g)
+                            : [...draft.interestedIn, g],
+                        })
+                      }
+                      className={`py-2 rounded-xl border text-sm font-medium capitalize transition-colors flex items-center justify-between px-3 ${
+                        selected
+                          ? 'border-orange-500 bg-orange-500/10 text-orange-400'
+                          : 'border-zinc-700 text-zinc-400 hover:border-zinc-600'
+                      }`}
+                    >
+                      {g}
+                      {selected && <Check size={13} />}
+                    </button>
+                  );
+                })}
+              </div>
+            ) : (
+              <p className="text-white font-medium capitalize">
+                {currentUser.interestedIn.join(', ')}
+              </p>
+            )}
+          </div>
+
+          <div>
             <label className="label">Looking for</label>
             {editing ? (
               <div className="space-y-2">
