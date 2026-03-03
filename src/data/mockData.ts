@@ -692,7 +692,7 @@ export const MOCK_USERS: UserProfile[] = [
   },
   {
     id: 'mock-31',
-    name: 'Max Harrington',
+    name: 'Max Feldman',
     age: 29,
     gender: 'male',
     interestedIn: ['female'],
@@ -714,7 +714,7 @@ export const MOCK_USERS: UserProfile[] = [
   },
   {
     id: 'mock-32',
-    name: 'Tina Alvarez',
+    name: 'Tina Garbe',
     age: 27,
     gender: 'female',
     interestedIn: ['male'],
@@ -736,7 +736,7 @@ export const MOCK_USERS: UserProfile[] = [
   },
   {
     id: 'mock-33',
-    name: 'Stacey Mullins',
+    name: 'Stacey Feldman',
     age: 31,
     gender: 'female',
     interestedIn: ['male', 'female'],
@@ -758,7 +758,7 @@ export const MOCK_USERS: UserProfile[] = [
   },
   {
     id: 'mock-34',
-    name: 'Katie Brennan',
+    name: 'Katie Wei',
     age: 25,
     gender: 'female',
     interestedIn: ['male'],
@@ -780,7 +780,7 @@ export const MOCK_USERS: UserProfile[] = [
   },
   {
     id: 'mock-35',
-    name: 'Jake Ostrowski',
+    name: 'Jake Croxdale',
     age: 33,
     gender: 'male',
     interestedIn: ['female'],
@@ -797,6 +797,28 @@ export const MOCK_USERS: UserProfile[] = [
     crossfitRanking: 22000,
     favoriteMovement: 'Clean & Jerk',
     leastFavoriteMovement: 'Burpee Box Jump-Over',
+    lookingFor: 'romantic',
+    division: 'rx',
+  },
+  {
+    id: 'mock-36',
+    name: 'Lisa Covey',
+    age: 30,
+    gender: 'female',
+    interestedIn: ['male'],
+    bio: 'CrossFit Roots is my second home and the community is everything. I came for the fitness and stayed for the people. Strong on the barbell, still working on my gymnastics. Post-WOD coffee on Pearl Street is sacred.',
+    photos: [
+      '/photos/lisa1.jpeg',
+      '/photos/lisa2.jpeg',
+      '/photos/lisa3.jpeg',
+    ],
+    homeGym: GYMS[21], // CrossFit Roots
+    franTime: '5:45',
+    backSquat1RM: 180,
+    deadlift1RM: 225,
+    crossfitRanking: null,
+    favoriteMovement: 'Deadlift',
+    leastFavoriteMovement: 'Double-Under',
     lookingFor: 'romantic',
     division: 'rx',
   },
