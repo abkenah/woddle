@@ -720,9 +720,10 @@ export const MOCK_USERS: UserProfile[] = [
     interestedIn: ['male'],
     bio: 'Registered nurse, CrossFit addict, and very serious about my pre-workout coffee. I PR\'d my snatch the same week I worked three overnight shifts, so I\'m basically unstoppable. Looking for someone who cheers as loud as I do.',
     photos: [
-      '/photos/tina1.jpg',
-      '/photos/tina2.jpg',
-      '/photos/tina3.jpg',
+      '/photos/tina1.jpeg',
+      '/photos/tina2.jpeg',
+      '/photos/tina3.jpeg',
+      '/photos/tina4.jpeg',
     ],
     homeGym: GYMS[21], // CrossFit Roots
     franTime: '4:55',
@@ -742,9 +743,8 @@ export const MOCK_USERS: UserProfile[] = [
     interestedIn: ['male', 'female'],
     bio: 'Software engineer by day, barbell enthusiast by 5:30am. I have strong opinions about squat depth and an embarrassingly large collection of knee sleeves. Let\'s talk training, tacos, or both.',
     photos: [
-      '/photos/stacey1.jpg',
-      '/photos/stacey2.jpg',
-      '/photos/stacey3.jpg',
+      '/photos/stacey1.jpeg',
+      '/photos/stacey2.jpeg',
     ],
     homeGym: GYMS[21], // CrossFit Roots
     franTime: '5:30',
@@ -764,9 +764,11 @@ export const MOCK_USERS: UserProfile[] = [
     interestedIn: ['male'],
     bio: 'Former collegiate swimmer who found CrossFit and never looked back — the rowing erg is the only piece of equipment I trust completely. Competitive but I\'ll always clap for the last person to finish.',
     photos: [
-      '/photos/katie1.jpg',
-      '/photos/katie2.jpg',
-      '/photos/katie3.jpg',
+      '/photos/katie1.jpeg',
+      '/photos/katie2.jpeg',
+      '/photos/katie3.jpeg',
+      '/photos/katie4.jpeg',
+      '/photos/katie5.jpeg',
     ],
     homeGym: GYMS[21], // CrossFit Roots
     franTime: '3:20',
@@ -789,6 +791,7 @@ export const MOCK_USERS: UserProfile[] = [
       '/photos/jake1.jpeg',
       '/photos/jake2.jpeg',
       '/photos/jake3.jpeg',
+      '/photos/jake4.jpeg',
     ],
     homeGym: GYMS[21], // CrossFit Roots
     franTime: '4:15',
