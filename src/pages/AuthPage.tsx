@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Dumbbell, Mail, Lock, User, ArrowRight } from 'lucide-react';
 import { useApp } from '../store/AppContext';
-import { MOCK_USERS } from '../data/mockData';
-import { GYMS } from '../data/mockData';
+import { MOCK_USERS, DEMO_USER } from '../data/mockData';
 
 export default function AuthPage() {
   const [tab, setTab] = useState<'login' | 'signup'>('login');
@@ -21,8 +20,8 @@ export default function AuthPage() {
       setError('Please fill in all fields.');
       return;
     }
-    // Demo: log in as first mock user for simplicity
-    dispatch({ type: 'LOGIN', user: MOCK_USERS[0] });
+    // Demo: log in as the demo account
+    dispatch({ type: 'LOGIN', user: DEMO_USER });
     navigate('/app/discover');
   }
 
@@ -159,35 +158,24 @@ export default function AuthPage() {
           </button>
         </form>
 
-        {/* Demo shortcuts */}
-        <div className="pt-2 border-t border-zinc-800">
-          <p className="text-xs text-zinc-500 mb-3 text-center">
-            Quick demo — log in as:
-          </p>
-          <div className="flex flex-col gap-2">
-            {MOCK_USERS.slice(0, 3).map((u) => (
-              <button
-                key={u.id}
-                onClick={() => demoLogin(u.id)}
-                className="flex items-center gap-3 p-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 transition-colors text-left"
-              >
-                <img
-                  src={u.photos[0]}
-                  alt={u.name}
-                  className="w-9 h-9 rounded-full object-cover"
-                />
-                <div className="flex-1 min-w-0">
-                  <p className="text-white text-sm font-semibold">
-                    {u.name}, {u.age}
-                  </p>
-                  <p className="text-zinc-500 text-xs truncate">
-                    {u.homeGym?.name} · {u.division.toUpperCase()}
-                  </p>
-                </div>
-                <ArrowRight size={14} className="text-zinc-500 shrink-0" />
-              </button>
-            ))}
-          </div>
+        {/* Demo access */}
+        <div className="pt-2 border-t border-zinc-800 space-y-3">
+          <p className="text-xs text-zinc-500 text-center">or</p>
+          <button
+            onClick={() => { dispatch({ type: 'LOGIN', user: DEMO_USER }); navigate('/app/discover'); }}
+            className="w-full flex items-center gap-3 p-3 rounded-xl border border-orange-500/40 bg-orange-500/10 hover:bg-orange-500/20 transition-colors text-left"
+          >
+            <img
+              src={DEMO_USER.photos[0]}
+              alt={DEMO_USER.name}
+              className="w-10 h-10 rounded-full object-cover ring-2 ring-orange-500/50"
+            />
+            <div className="flex-1 min-w-0">
+              <p className="text-white text-sm font-semibold">Try the demo</p>
+              <p className="text-zinc-400 text-xs">{DEMO_USER.homeGym?.name} · no account needed</p>
+            </div>
+            <ArrowRight size={16} className="text-orange-400 shrink-0" />
+          </button>
         </div>
       </div>
     </div>

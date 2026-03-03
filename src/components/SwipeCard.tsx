@@ -158,18 +158,20 @@ export default function SwipeCard({ user, mode, onSwipe, isTop }: Props) {
         {/* Photo nav zones (tap areas) */}
         {photoIdx > 0 && (
           <button
-            className="absolute left-0 top-8 bottom-32 w-1/3 flex items-center justify-start pl-2 opacity-0 hover:opacity-100 transition-opacity"
+            className="absolute left-0 top-8 bottom-36 w-1/3 flex items-center justify-start pl-2 opacity-30 hover:opacity-100 transition-opacity"
+            onPointerDown={(e) => e.stopPropagation()}
             onClick={prevPhoto}
           >
-            <ChevronLeft className="text-white/60" size={28} />
+            <ChevronLeft className="text-white" size={28} />
           </button>
         )}
         {photoIdx < user.photos.length - 1 && (
           <button
-            className="absolute right-0 top-8 bottom-32 w-1/3 flex items-center justify-end pr-2 opacity-0 hover:opacity-100 transition-opacity"
+            className="absolute right-0 top-8 bottom-36 w-1/3 flex items-center justify-end pr-2 opacity-30 hover:opacity-100 transition-opacity"
+            onPointerDown={(e) => e.stopPropagation()}
             onClick={nextPhoto}
           >
-            <ChevronRight className="text-white/60" size={28} />
+            <ChevronRight className="text-white" size={28} />
           </button>
         )}
 
@@ -252,6 +254,7 @@ export default function SwipeCard({ user, mode, onSwipe, isTop }: Props) {
           {/* Expand bio button */}
           <button
             className="text-xs text-zinc-400 hover:text-white transition-colors underline underline-offset-2"
+            onPointerDown={(e) => e.stopPropagation()}
             onClick={(e) => {
               e.stopPropagation();
               setShowDetail((v) => !v);
