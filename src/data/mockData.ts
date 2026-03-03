@@ -786,9 +786,9 @@ export const MOCK_USERS: UserProfile[] = [
     interestedIn: ['female'],
     bio: 'High school teacher, Roots regular, and the guy who definitely tears his hands every Open season and acts surprised every time. I coach the Saturday class and I promise I\'m much more laid-back in real life than my whiteboard standards suggest.',
     photos: [
-      '/photos/jake1.jpg',
-      '/photos/jake2.jpg',
-      '/photos/jake3.jpg',
+      '/photos/jake1.jpeg',
+      '/photos/jake2.jpeg',
+      '/photos/jake3.jpeg',
     ],
     homeGym: GYMS[21], // CrossFit Roots
     franTime: '4:15',
