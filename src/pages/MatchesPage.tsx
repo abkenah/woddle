@@ -218,10 +218,14 @@ function MatchDetail({ user, onBack }: { user: UserProfile; onBack: () => void }
               <button
                 key={i}
                 onClick={() => setPhotoIdx(i)}
-                className={`h-1 rounded-full flex-1 max-w-[60px] transition-colors ${
-                  i === photoIdx ? 'bg-white' : 'bg-white/30'
-                }`}
-              />
+                className="flex-1 max-w-[60px] py-3 flex items-center"
+              >
+                <div
+                  className={`h-1 rounded-full w-full transition-colors ${
+                    i === photoIdx ? 'bg-white' : 'bg-white/30'
+                  }`}
+                />
+              </button>
             ))}
           </div>
         )}
