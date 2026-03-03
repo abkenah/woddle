@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Dumbbell, Mail, Lock, User, ArrowRight } from 'lucide-react';
 import { useApp } from '../store/AppContext';
-import { MOCK_USERS } from '../data/mockData';
-import { GYMS } from '../data/mockData';
+import { MOCK_USERS, DEMO_USER } from '../data/mockData';
 
 export default function AuthPage() {
   const [tab, setTab] = useState<'login' | 'signup'>('login');
@@ -21,8 +20,8 @@ export default function AuthPage() {
       setError('Please fill in all fields.');
       return;
     }
-    // Demo: log in as first mock user for simplicity
-    dispatch({ type: 'LOGIN', user: MOCK_USERS[0] });
+    // Demo: log in as the demo account
+    dispatch({ type: 'LOGIN', user: DEMO_USER });
     navigate('/app/discover');
   }
 
@@ -165,10 +164,10 @@ export default function AuthPage() {
             Quick demo — log in as:
           </p>
           <div className="flex flex-col gap-2">
-            {MOCK_USERS.slice(0, 3).map((u) => (
+            {[DEMO_USER, ...MOCK_USERS.slice(0, 2)].map((u) => (
               <button
                 key={u.id}
-                onClick={() => demoLogin(u.id)}
+                onClick={() => u.id === 'demo' ? (() => { dispatch({ type: 'LOGIN', user: DEMO_USER }); navigate('/app/discover'); })() : demoLogin(u.id)}
                 className="flex items-center gap-3 p-2 rounded-xl bg-zinc-800 hover:bg-zinc-700 transition-colors text-left"
               >
                 <img
@@ -179,6 +178,7 @@ export default function AuthPage() {
                 <div className="flex-1 min-w-0">
                   <p className="text-white text-sm font-semibold">
                     {u.name}, {u.age}
+                    {u.id === 'demo' && <span className="ml-2 text-orange-400 text-xs font-normal">demo</span>}
                   </p>
                   <p className="text-zinc-500 text-xs truncate">
                     {u.homeGym?.name} · {u.division.toUpperCase()}

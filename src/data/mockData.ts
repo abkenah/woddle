@@ -32,6 +32,25 @@ export const GYMS: CrossfitGym[] = [
   { id: 'cf-flatirons', name: 'Flatirons CrossFit', city: 'Lafayette', state: 'CO', country: 'USA' },
 ];
 
+export const DEMO_USER: UserProfile = {
+  id: 'demo',
+  name: 'Alex Demo',
+  age: 28,
+  gender: 'male',
+  interestedIn: ['female'],
+  bio: 'CrossFit Roots member and all-around enthusiast. Always chasing the next PR.',
+  photos: ['https://randomuser.me/api/portraits/men/11.jpg'],
+  homeGym: { id: 'cf-roots', name: 'CrossFit Roots', city: 'Boulder', state: 'CO', country: 'USA' },
+  franTime: '5:00',
+  backSquat1RM: 275,
+  deadlift1RM: 345,
+  crossfitRanking: null,
+  favoriteMovement: 'Clean & Jerk',
+  leastFavoriteMovement: 'Burpee',
+  lookingFor: 'both',
+  division: 'rx',
+};
+
 export const MOCK_USERS: UserProfile[] = [
   {
     id: 'mock-1',
