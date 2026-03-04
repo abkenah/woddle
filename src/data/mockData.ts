@@ -1,5 +1,7 @@
 import { CrossfitGym, UserProfile } from '../types';
 
+const B = import.meta.env.BASE_URL;
+
 export const GYMS: CrossfitGym[] = [
   { id: 'cf-mayhem', name: 'CrossFit Mayhem', city: 'Cookeville', state: 'TN', country: 'USA' },
   { id: 'cf-invictus', name: 'CrossFit Invictus', city: 'San Diego', state: 'CA', country: 'USA' },
@@ -717,9 +719,9 @@ export const MOCK_USERS: UserProfile[] = [
     interestedIn: ['female'],
     bio: 'Equal parts CrossFit and mountain bike miles. Yeti guy, chronic traveler, and firmly believe the best post-WOD recovery is a waterfall in Central America. If I\'m not at Roots you\'ll find me in the mountains or planning the next trip.',
     photos: [
-      '/photos/max1.jpeg',
-      '/photos/max2.jpeg',
-      '/photos/max3.jpeg',
+      B + 'photos/max1.jpeg',
+      B + 'photos/max2.jpeg',
+      B + 'photos/max3.jpeg',
     ],
     homeGym: GYMS[21], // CrossFit Roots
     franTime: '3:45',
@@ -739,10 +741,10 @@ export const MOCK_USERS: UserProfile[] = [
     interestedIn: ['male'],
     bio: 'Registered nurse, CrossFit addict, and very serious about my pre-workout coffee. I PR\'d my snatch the same week I worked three overnight shifts, so I\'m basically unstoppable. Looking for someone who cheers as loud as I do.',
     photos: [
-      '/photos/tina1.jpeg',
-      '/photos/tina2.jpeg',
-      '/photos/tina3.jpeg',
-      '/photos/tina4.jpeg',
+      B + 'photos/tina1.jpeg',
+      B + 'photos/tina2.jpeg',
+      B + 'photos/tina3.jpeg',
+      B + 'photos/tina4.jpeg',
     ],
     homeGym: GYMS[21], // CrossFit Roots
     franTime: '4:55',
@@ -762,8 +764,8 @@ export const MOCK_USERS: UserProfile[] = [
     interestedIn: ['male', 'female'],
     bio: 'Software engineer by day, barbell enthusiast by 5:30am. I have strong opinions about squat depth and an embarrassingly large collection of knee sleeves. Let\'s talk training, tacos, or both.',
     photos: [
-      '/photos/stacey1.jpeg',
-      '/photos/stacey2.jpeg',
+      B + 'photos/stacey1.jpeg',
+      B + 'photos/stacey2.jpeg',
     ],
     homeGym: GYMS[21], // CrossFit Roots
     franTime: '5:30',
@@ -783,11 +785,11 @@ export const MOCK_USERS: UserProfile[] = [
     interestedIn: ['male'],
     bio: 'Former collegiate swimmer who found CrossFit and never looked back — the rowing erg is the only piece of equipment I trust completely. Competitive but I\'ll always clap for the last person to finish.',
     photos: [
-      '/photos/katie1.jpeg',
-      '/photos/katie2.jpeg',
-      '/photos/katie3.jpeg',
-      '/photos/katie4.jpeg',
-      '/photos/katie5.jpeg',
+      B + 'photos/katie1.jpeg',
+      B + 'photos/katie2.jpeg',
+      B + 'photos/katie3.jpeg',
+      B + 'photos/katie4.jpeg',
+      B + 'photos/katie5.jpeg',
     ],
     homeGym: GYMS[21], // CrossFit Roots
     franTime: '3:20',
@@ -807,10 +809,10 @@ export const MOCK_USERS: UserProfile[] = [
     interestedIn: ['female'],
     bio: 'High school teacher, Roots regular, and the guy who definitely tears his hands every Open season and acts surprised every time. I coach the Saturday class and I promise I\'m much more laid-back in real life than my whiteboard standards suggest.',
     photos: [
-      '/photos/jake1.jpeg',
-      '/photos/jake2.jpeg',
-      '/photos/jake3.jpeg',
-      '/photos/jake4.jpeg',
+      B + 'photos/jake1.jpeg',
+      B + 'photos/jake2.jpeg',
+      B + 'photos/jake3.jpeg',
+      B + 'photos/jake4.jpeg',
     ],
     homeGym: GYMS[21], // CrossFit Roots
     franTime: '4:15',
@@ -830,9 +832,9 @@ export const MOCK_USERS: UserProfile[] = [
     interestedIn: ['male'],
     bio: 'CrossFit Roots is my second home and the community is everything. I came for the fitness and stayed for the people. Strong on the barbell, still working on my gymnastics. Post-WOD coffee on Pearl Street is sacred.',
     photos: [
-      '/photos/lisa1.jpeg',
-      '/photos/lisa2.jpeg',
-      '/photos/lisa3.jpeg',
+      B + 'photos/lisa1.jpeg',
+      B + 'photos/lisa2.jpeg',
+      B + 'photos/lisa3.jpeg',
     ],
     homeGym: GYMS[21], // CrossFit Roots
     franTime: '5:45',
